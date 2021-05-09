@@ -1,0 +1,2 @@
+Cargo An-225 850 0.6 4000 250 6 P.V.Balabuev CargoEngine 1377
+Passenger AirbusA380 945 0.4 15200 150 525 115 PassengerEngine 1244

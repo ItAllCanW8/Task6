@@ -1,12 +1,12 @@
 package by.epamtc.entity;
 
 public class PassengerPlane extends Plane {
-    public int portholeNumber;
+    public String portholeNumber;
 
     public PassengerPlane(){}
 
     public PassengerPlane(String modelTitle, int maxSpeed, double fuelConsumption,
-                          int rangeOfFlight, Engine engine, int carryingCapacity, int humanCapacity, int portholeNumber){
+                          int rangeOfFlight, Engine engine, int carryingCapacity, int humanCapacity, String portholeNumber){
         super(modelTitle, maxSpeed, fuelConsumption, rangeOfFlight, engine, carryingCapacity, humanCapacity);
         this.portholeNumber = portholeNumber;
     }
@@ -30,20 +30,21 @@ public class PassengerPlane extends Plane {
     @Override
     public int hashCode() {
         int result = super.hashCode();
-        result = 31 * result + portholeNumber;
+        result = 31 * result + (portholeNumber != null ? portholeNumber.hashCode() : 0);
         return result;
     }
 
     @Override
     public String toString() {
         return "PassengerPlane{" +
-                "portholeNumber=" + portholeNumber +
-                ", modelTitle='" + modelTitle + '\'' +
+                "modelTitle='" + modelTitle + '\'' +
                 ", maxSpeed=" + maxSpeed +
                 ", fuelConsumption=" + fuelConsumption +
                 ", rangeOfFlight=" + rangeOfFlight +
                 ", engine=" + engine +
                 ", carryingCapacity=" + carryingCapacity +
+                ", humanCapacity=" + humanCapacity +
+                ", portholeNumber='" + portholeNumber +
                 '}';
     }
 }

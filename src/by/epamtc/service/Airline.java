@@ -5,6 +5,7 @@ import by.epamtc.entity.Plane;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Objects;
 
 public class Airline {
     private ArrayList<Plane> planes;
@@ -14,6 +15,10 @@ public class Airline {
     }
 
     public Airline(PlaneDAO dao){
+        planes = dao.getAll();
+    }
+
+    public void update(PlaneDAO dao){
         planes = dao.getAll();
     }
 
@@ -47,5 +52,31 @@ public class Airline {
                 return p;
 
         return null;
+    }
+
+    public ArrayList<Plane> getAll() {
+        return planes;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Airline airline = (Airline) o;
+
+        return Objects.equals(planes, airline.planes);
+    }
+
+    @Override
+    public int hashCode() {
+        return planes != null ? planes.hashCode() : 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Airline{" +
+                "planes=" + planes +
+                '}';
     }
 }

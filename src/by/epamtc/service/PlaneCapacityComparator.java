@@ -12,6 +12,6 @@ public class PlaneCapacityComparator implements Comparator<Plane> {
         if (result == 0)
             result = Integer.compare(p1.getHumanCapacity(), p2.getHumanCapacity());
 
-        return 0;
+        return result;
     }
 }

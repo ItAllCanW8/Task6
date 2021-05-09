@@ -39,13 +39,14 @@ public class CargoAirplane extends Plane {
     @Override
     public String toString() {
         return "CargoAirplane{" +
-                "cargoType='" + chiefDesigner + '\'' +
-                ", modelTitle='" + modelTitle + '\'' +
+                "modelTitle='" + modelTitle + '\'' +
                 ", maxSpeed=" + maxSpeed +
                 ", fuelConsumption=" + fuelConsumption +
                 ", rangeOfFlight=" + rangeOfFlight +
                 ", engine=" + engine +
                 ", carryingCapacity=" + carryingCapacity +
+                ", humanCapacity=" + humanCapacity +
+                ", chiefDesigner='" + chiefDesigner +
                 '}';
     }
 }
