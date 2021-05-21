@@ -13,9 +13,8 @@ public class CargoAirplane extends Plane {
         this.chiefDesigner = chiefDesigner;
     }
 
-    @Override
-    public void fly() {
-        System.out.println("Im cargo plane and im flying");
+    public void setChiefDesigner(String chiefDesigner) {
+        this.chiefDesigner = chiefDesigner;
     }
 
     @Override

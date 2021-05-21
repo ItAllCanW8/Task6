@@ -21,7 +21,7 @@ public class PlaneDAO {
     }
 
     public void createPlanesFromData(String dataFileName) throws IOException, NonExistingParameterException {
-        Path path = Paths.get(dataFileName);
+        Path path = Paths.get("src\\by\\epamtc\\resources\\" + dataFileName).toAbsolutePath();
         ArrayList<String> readedLines = (ArrayList<String>) Files.readAllLines(path);
 
         for (String line : readedLines) {

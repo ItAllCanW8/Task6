@@ -1,7 +1,6 @@
 package by.epamtc.service;
 
 import by.epamtc.entity.Plane;
-import by.epamtc.exception.NonExistingParameterException;
 
 import java.util.Comparator;
 

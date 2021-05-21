@@ -1,8 +1,6 @@
 package by.epamtc.entity;
 
-public interface IPLane {
-    void fly();
-
+public interface Flying {
     String getModelTitle();
 
     int getMaxSpeed();

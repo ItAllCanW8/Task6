@@ -11,9 +11,8 @@ public class PassengerPlane extends Plane {
         this.portholeNumber = portholeNumber;
     }
 
-    @Override
-    public void fly(){
-        System.out.println("Im passenger plane and im flying");
+    public void setPortholeNumber(String portholeNumber) {
+        this.portholeNumber = portholeNumber;
     }
 
     @Override

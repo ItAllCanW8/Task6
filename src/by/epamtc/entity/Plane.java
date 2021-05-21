@@ -2,7 +2,7 @@ package by.epamtc.entity;
 
 import java.util.Objects;
 
-public class Plane implements IPLane {
+public class Plane implements Flying {
     protected String modelTitle;
     protected int maxSpeed;
     protected double fuelConsumption;
@@ -22,11 +22,6 @@ public class Plane implements IPLane {
         this.engine = engine;
         this.carryingCapacity = carryingCapacity;
         this.humanCapacity = humanCapacity;
-    }
-
-    @Override
-    public void fly() {
-        System.out.println("Im plane and im flying");
     }
 
     @Override
@@ -62,6 +57,34 @@ public class Plane implements IPLane {
     @Override
     public int getHumanCapacity() {
         return humanCapacity;
+    }
+
+    public void setModelTitle(String modelTitle) {
+        this.modelTitle = modelTitle;
+    }
+
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public void setFuelConsumption(double fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
+    }
+
+    public void setRangeOfFlight(int rangeOfFlight) {
+        this.rangeOfFlight = rangeOfFlight;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    public void setCarryingCapacity(int carryingCapacity) {
+        this.carryingCapacity = carryingCapacity;
+    }
+
+    public void setHumanCapacity(int humanCapacity) {
+        this.humanCapacity = humanCapacity;
     }
 
     @Override

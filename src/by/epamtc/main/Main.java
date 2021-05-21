@@ -9,6 +9,8 @@ import by.epamtc.service.PlaneCapacityComparator;
 import by.epamtc.service.PlaneCarrCapacityComparator;
 
 import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class Main {
 
@@ -21,11 +23,17 @@ public class Main {
         System.out.println("=========================================================================================");
     }
 
-    public static void main(String[] args) throws IOException, NonExistingParameterException {
+    public static void main(String[] args) {
         String fileName = "data.txt";
 
         PlaneDAO dao = new PlaneDAO();
-        dao.createPlanesFromData(fileName);
+
+        try {
+            dao.createPlanesFromData(fileName);
+        } catch (NonExistingParameterException | IOException e) {
+            System.out.println(e.getMessage());
+        }
+
         Airline airline = new Airline(dao);
 
         printPlanes(airline);
